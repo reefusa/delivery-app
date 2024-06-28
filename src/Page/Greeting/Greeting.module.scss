@@ -1,0 +1,6 @@
+@use '../../assets/scss/style.scss' as *;
+
+.greeting {
+    @include container;
+    @include subtitle;
+}

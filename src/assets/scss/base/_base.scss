@@ -1,0 +1,32 @@
+body,
+html {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+@mixin caption {
+    @include adaptiv-font(24, 26);
+}
+
+@mixin title {
+    @include adaptiv-font(22, 24);
+}
+
+@mixin subtitle {
+    @include adaptiv-font(20, 18);
+}
+
+@mixin container {
+    max-width: $maxWidth + px;
+    margin: 0 auto;
+    padding: 0 25px;
+}

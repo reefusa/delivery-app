@@ -1,0 +1,51 @@
+@use '../../assets/scss/style.scss' as *;
+
+.footer {
+    margin-top: auto;
+    background-color: #000000c4;
+    padding: 30px 0;
+
+    .container {
+        @include container;
+    }
+
+    .body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        @include subtitle;
+        color: #fff;
+    }
+
+    .networks {
+
+        a {
+            background-color: #fff;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 2em;
+            margin: 0 10px;
+
+            &:hover {
+                background-color: #ffffff6a;
+            }
+
+            img {
+                width: 25px;
+                transition: all 300ms ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            @media (max-width:768px) {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+    }
+}
