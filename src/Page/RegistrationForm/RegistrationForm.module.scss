@@ -1,0 +1,35 @@
+@use '../../assets/scss/style.scss' as*;
+
+.registration__form {
+    margin-top: 100px;
+
+    .container {
+        @include container;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include subtitle;
+    }
+
+    input {
+        width: 80%;
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: 2px $colorMain solid;
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    button {
+        display: inline-block;
+        margin-top: 50px;
+        background-color: $colorMain;
+        color: $colorComplementaryText;
+        padding: 10px 15px;
+        border-radius: 15px;
+        font-weight: 500;
+    }
+}

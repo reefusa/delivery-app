@@ -1,0 +1,10 @@
+@use '../../assets/scss/style.scss' as *;
+
+.options {
+    @include container;
+    @include subtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
