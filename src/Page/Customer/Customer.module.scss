@@ -1,0 +1,13 @@
+@use '../../assets/scss/style.scss' as*;
+
+.customer {
+    margin-top: 90px;
+
+    .container {
+        @include container;
+    }
+
+    .body {
+        @include subtitle;
+    }
+}

@@ -1,0 +1,26 @@
+@use '../../assets/scss/style.scss' as*;
+
+.order {
+    margin: 70px 0 50px;
+    @include subtitle;
+
+    .container {
+        @include container;
+    }
+
+    .common {
+        color: $colorAdditional;
+        margin-top: 15px;
+    }
+
+    .color {
+        color: $colorMain;
+    }
+
+    .img {
+        width: 75%;
+        display: block;
+        margin: 20px auto;
+        border-radius: 2em;
+    }
+}

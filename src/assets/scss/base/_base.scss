@@ -23,6 +23,10 @@ html {
 
 @mixin subtitle {
     @include adaptiv-font(20, 18);
+
+    @media (max-width: 768px) {
+        @include adaptiv-font(22, 20);
+    }
 }
 
 @mixin container {

@@ -1,0 +1,22 @@
+@use '../../assets/scss/style.scss' as*;
+
+.customer {
+    margin-top: 100px;
+
+    .container {
+        @include container;
+    }
+
+    .body {
+        @include subtitle;
+        text-align: center;
+    }
+
+    .applications {
+        margin: 20px 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

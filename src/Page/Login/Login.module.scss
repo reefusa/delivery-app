@@ -1,0 +1,64 @@
+@use '../../assets/scss/style.scss' as*;
+
+.main__block {
+    background-color: $colorMain;
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    .container {
+        @include container;
+    }
+
+    .body {
+        background-color: $colorComplementaryText;
+        padding: 20px 5px;
+        border-radius: 10px;
+        @include subtitle;
+        text-align: center;
+    }
+
+    .title {
+        @include title;
+    }
+
+    .form {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block__input {
+        border: 2px solid $colorMain;
+        border-radius: 10px;
+        width: 80%;
+        padding: 8px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        margin-top: 30px;
+        background-color: $colorMain;
+        padding: 5px 10px;
+        border-radius: 7px;
+        color: $colorComplementaryText;
+        font-weight: 500;
+    }
+
+    .registration {
+        margin-top: 20px;
+    }
+
+    .link {
+        display: block;
+        color: $colorMain;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .block__input__error {
+        border: 2px $colorError solid !important;
+    }
+}
