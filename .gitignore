@@ -7,6 +7,10 @@
 .pnp.js
 backend/requests.rest
 
+#Рабочая среда 
+/Файлы
+/.vscode
+
 # testing
 /coverage
 

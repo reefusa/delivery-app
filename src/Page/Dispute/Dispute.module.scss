@@ -1,0 +1,47 @@
+@use '../../assets/scss/style.scss' as*;
+
+.dispute {
+    @include subtitle;
+    margin: 40px 0;
+
+    .container {
+        @include container;
+    }
+
+    .chat {
+        margin-top: 30px;
+        border: $colorAdditional 2px solid;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: $colorAdditional 2px solid;
+        margin-bottom: 10px;
+    }
+
+    .message {
+        display: inline-block;
+        max-width: 70%;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    .first_user {
+        color: $colorComplementaryText;
+        background-color: $colorMain;
+        align-self: flex-end;
+    }
+
+    .second_user {
+        background-color: $colorAdditional;
+        color: $colorComplementaryText;
+        align-self: flex-start;
+    }
+}

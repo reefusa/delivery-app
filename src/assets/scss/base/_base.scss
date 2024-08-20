@@ -1,16 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+//  font-family: "Nunito", sans-serif;
+
 body,
 html {
     height: 100%;
+    font-family: $mainFontText;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.main {
-    margin-top: 100px;
 }
 
 @mixin caption {
@@ -25,7 +25,15 @@ html {
     @include adaptiv-font(20, 18);
 
     @media (max-width: 768px) {
-        @include adaptiv-font(22, 20);
+        @include adaptiv-font(24, 22);
+    }
+}
+
+@mixin link {
+    @include adaptiv-font(20, 18);
+
+    @media (max-width: 768px) {
+        @include adaptiv-font(26, 24);
     }
 }
 

@@ -1,0 +1,30 @@
+@use '../../assets/scss/style.scss' as*;
+
+.menu {
+    padding: 20px 5px;
+    background: $colorMain;
+    color: $colorComplementaryText;
+
+    .container {
+        @include container;
+    }
+
+    .body {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title {
+        @include title;
+    }
+
+    .svg__arrow {
+        width: 30px;
+    }
+
+    .svg__translate {
+        width: 45px;
+    }
+}

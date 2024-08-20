@@ -1,0 +1,11 @@
+@use '../../assets/scss/style.scss' as*;
+
+.admin {
+    margin-top: 30px;
+    @include subtitle;
+    text-align: center;
+
+    .container {
+        @include container;
+    }
+}

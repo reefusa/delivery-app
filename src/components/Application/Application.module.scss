@@ -2,7 +2,7 @@
 
 .application {
     width: 100%;
-    margin: 10px 0;
+    margin: 20px 0;
     border: 1px solid $colorMain;
     border-radius: 5px;
     padding: 10px;
@@ -14,36 +14,32 @@
     @include subtitle;
 
     .img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         border-radius: 10px;
-        object-fit: contain;
-    }
-
-    .description {
-        flex: 1 100%;
-        margin-top: 10px;
+        object-fit: cover;
     }
 
     .block_info {
         flex-grow: 1;
-        padding: 0 0 0 10px;
-    }
-
-    .info {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-content: space-around;
+        height: 100px;
     }
-
-    .title {}
 
     .weight {
         margin-top: 10px;
     }
 
     .destination {
-        margin-top: 10px;
+        margin-top: 15px;
         color: $colorMain;
+    }
+
+    .description {
+        flex: 1 100%;
+        margin-top: 10px;
     }
 }

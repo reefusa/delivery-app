@@ -3,8 +3,24 @@
 .options {
     @include container;
     @include subtitle;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+
+    .title {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .categories {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .link_courier {
+        color: $colorMain;
+    }
+
+    .link_customer {
+        color: $colorComplementaryText;
+    }
 }

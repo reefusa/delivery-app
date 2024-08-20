@@ -1,16 +1,18 @@
 @use '../../assets/scss/style.scss' as *;
 
 .greeting {
-    @include container;
     @include subtitle;
-    text-align: center;
+    margin: 40px 0 50px;
 
-    .btn {
-        margin-top: 50px;
-        display: inline-block;
-        background-color: #2DB34A;
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 15px;
+    .conteiner {
+        @include container;
+    }
+
+    .btn_link {
+        display: block;
+    }
+
+    .accent {
+        color: $colorMain;
     }
 }

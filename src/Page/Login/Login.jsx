@@ -3,6 +3,9 @@ import { useNavigate } from "react-router";
 import style from './Login.module.scss';
 import { Link } from "react-router-dom";
 import { sendApiRequest } from "../../utils/api/sendApiRequest";
+import { jwtDecode } from "jwt-decode";
+import { useTranslation } from "react-i18next";
+import { BASE_URL } from "../../utils/api/URL";
 
 
 function Login() {
@@ -16,7 +19,7 @@ function Login() {
     }, {});
     const [formData, setFormData] = useState(initialFormData);
     const [formValid, setFormValid] = useState(initialFormValid);
-    const URL = 'http://localhost:3003/login';
+    const { t } = useTranslation();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -49,32 +52,37 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // if (formValid) {
-        //     try {
-        //         const res = await fetch(URL, {
-        //             'method': 'POST',
-        //             headers: {
-        //                 'Content-Type': 'application/json'
-        //             },
-        //             'body': JSON.stringify(formData)
-        //         });
+        let isError = false;
 
-        //         const data = await res.json();
-        //         console.log(data);
-        //         setToken(data);
-        //     } catch (error) {
-        //         console.error('Ошибка при проверке токена', error);
+        // Object.entries(formData).forEach(([key, value]) => {
+        //     if (value.trim() === '' && !isError) {
+        //         alert(t('page.RegistrationForm.alert.empty_lines'));
+        //         isError = true;
         //     }
-        // }
+        // });
 
-        const data = await sendApiRequest('http://localhost:3003/login', 'POST', 'application/json', formData, formValid, e);
-        setToken(data);
-        console.log(data);
+        // Object.keys(formValid).forEach((el) => {
+        //     if (formValid[el] === false && !isError) {
+        //         alert(t('page.RegistrationForm.alert.incorrectly_filled'));
+        //         isError = true;
+        //     }
+        // });
+        // console.log(BASE_URL + `/login`);
+
+        if (!isError) {
+            const data = await sendApiRequest(BASE_URL + `/login`, 'POST', 'application/json', formData, formValid, e);
+            if (data) {
+                setToken(data);
+            }
+        }
     }
 
     useEffect(() => {
         if (token && token.auth) {
-            navigate(`/${token.role}`, { replace: true });
+            const decoded = jwtDecode(token.accessToken);
+            localStorage.setItem('accessToken', token.accessToken);
+            localStorage.setItem('refreshToken', token.refreshToken);
+            navigate(`/${decoded.role}`, { replace: true });
         }
     }, [token]);
 

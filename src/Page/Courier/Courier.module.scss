@@ -1,7 +1,7 @@
 @use '../../assets/scss/style.scss' as*;
 
 .customer {
-    margin-top: 100px;
+    margin: 90px 0 20px;
 
     .container {
         @include container;
@@ -13,7 +13,7 @@
     }
 
     .applications {
-        margin: 20px 0 30px;
+        margin: 0px 0 30px;
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -1,0 +1,110 @@
+@use '../../assets/scss/style.scss' as*;
+
+.container {
+    @include container;
+}
+
+.account {
+    margin: 40px 0 50px;
+    @include subtitle;
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include subtitle;
+    }
+
+    .userpic {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .name {
+        @include title;
+        font-weight: 600;
+        margin-top: 25px;
+        color: $colorMain;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include subtitle;
+    }
+
+    .block__input {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 15px;
+        border: 2px $colorMain solid;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .block__input__error {
+        border: 2px $colorError solid !important;
+    }
+
+    .block__confirmation {
+        position: relative;
+    }
+
+    .btn__confirmation {
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: $colorMain;
+        color: $colorComplementaryText;
+    }
+
+    .block__input__file {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .body__input__file {
+            position: relative;
+            margin: 20px 0 0;
+        }
+
+        .input__file {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            font-size: 0;
+        }
+
+        .file {
+            margin-top: 20px;
+
+            &__passport {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+            &__pdf {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    input {
+        width: 70%;
+        font-weight: 500;
+    }
+}

@@ -1,13 +1,14 @@
 @use '../../assets/scss/style.scss' as*;
 
 .customer {
-    margin-top: 90px;
+    margin: 95px 0 40px;
+    @include subtitle;
 
     .container {
         @include container;
     }
 
     .body {
-        @include subtitle;
+        margin-top: 25px;
     }
 }

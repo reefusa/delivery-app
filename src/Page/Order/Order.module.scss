@@ -1,7 +1,7 @@
 @use '../../assets/scss/style.scss' as*;
 
 .order {
-    margin: 70px 0 50px;
+    margin: 20px 0 50px;
     @include subtitle;
 
     .container {
@@ -13,7 +13,7 @@
         margin-top: 15px;
     }
 
-    .color {
+    .accent {
         color: $colorMain;
     }
 
@@ -22,5 +22,9 @@
         display: block;
         margin: 20px auto;
         border-radius: 2em;
+    }
+
+    .error {
+        text-align: center;
     }
 }
